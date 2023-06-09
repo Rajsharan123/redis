@@ -20,3 +20,6 @@ services:
      - TZ=Canada/Toronto  
     volumes:
       - /home/raj/redis:/db
+  volumes:
+  /mnt/sharedata/redis:
+  /home/raj/redis:    
