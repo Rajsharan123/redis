@@ -1,11 +1,11 @@
-version: "2.1"
+version: "3.3"
 services:
   redis:
     image: redis:6.0.7
     container_name: redis
     restart: always
     volumes:
-      - /mnt/sharedata/redis:/data
+      - redis_volume_data:/data
     ports:
       - 6379:6379
   redis_insight:
@@ -14,9 +14,8 @@ services:
     restart: always
     ports:
       - 8001:8001
-    environment:
-     - PUID=1001 # for UserID
-     - PGID=1001
-     - TZ=Canada/Toronto  
     volumes:
-     - /home/raj/redis:/db  
+      - redis_insight_volume_data:/db
+volumes:
+  redis_volume_data:
+  redis_insight_volume_data:
