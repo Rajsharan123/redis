@@ -19,4 +19,4 @@ services:
      - PGID=0
      - TZ=Canada/Toronto  
     volumes:
-      - ./redis:/db
+      - /home/raj/redis:/db
