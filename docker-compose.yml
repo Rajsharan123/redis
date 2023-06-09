@@ -14,5 +14,9 @@ services:
     restart: always
     ports:
       - 8001:8001
+    environment:
+     - PUID=0 # for UserID
+     - PGID=0
+     - TZ=Canada/Toronto  
     volumes:
       - /mnt/sharedata/redis:/db
