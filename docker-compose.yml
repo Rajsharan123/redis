@@ -19,4 +19,4 @@ services:
      - PGID=1001
      - TZ=Canada/Toronto  
     volumes:
-      - /home/raj/redis:/db  
+     - /home/raj/redis:/db  
